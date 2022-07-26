@@ -1,0 +1,3 @@
+public enum SingleTon {
+    INSTANCE;
+}
