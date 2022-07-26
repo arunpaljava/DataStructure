@@ -1,3 +1,4 @@
+
 public class Test {
     public static void main(String srgs[]) {
         int a[] = {1, 4, 5, 6, 32, 50, 60, 70, 80, 90};
