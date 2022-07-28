@@ -1,7 +1,9 @@
 package DesignPatteren;
 public class SingleTonClient {
-    public static void main(){
+    public static void main(String args []){
+
         SingleTon singleTon = SingleTon.INSTANCE;
-        System.out.println(singleTon);
+        singleTon.setValue(20);
+        System.out.println(singleTon.getValue());
     }
 }

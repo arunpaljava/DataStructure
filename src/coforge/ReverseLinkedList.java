@@ -2,6 +2,7 @@ package coforge;
 
 public class ReverseLinkedList {
     static Node head;
+
     static class Node {
         Node next;
         int val;
@@ -11,12 +12,13 @@ public class ReverseLinkedList {
             next = null;
         }
     }//         p  c
-        //1->2->3->4->5->null
+
+    //1->2->3->4->5->null
     //5->4->3->2->1->null                   3->2->1->null
-    private Node reverse(Node head){
+    private Node reverse(Node head) {
         Node currentNode = head;
         Node prev = null;
-        while(null != currentNode){
+        while (null != currentNode) {
             Node tmp = currentNode.next;//3
             currentNode.next = prev;//null
             prev = currentNode;
@@ -25,7 +27,8 @@ public class ReverseLinkedList {
         return prev;
 
     }
-    public static void main(String args[]){
+
+    public static void main(String args[]) {
         ReverseLinkedList reverseLinkedList = new ReverseLinkedList();
         reverseLinkedList.head = new Node(1);
         reverseLinkedList.head.next = new Node(2);
@@ -36,12 +39,12 @@ public class ReverseLinkedList {
         System.out.println("Print Original LinkedList");
         reverseLinkedList.printLinkedList(head);
         System.out.println("Print Reverse LinkedList");
-        Node reverseHead= reverseLinkedList.reverse(head);
+        Node reverseHead = reverseLinkedList.reverse(head);
         reverseLinkedList.printLinkedList(reverseHead);
     }
 
     private void printLinkedList(Node node) {
-        while (null !=node){
+        while (null != node) {
             System.out.println(node.val);
             node = node.next;
         }

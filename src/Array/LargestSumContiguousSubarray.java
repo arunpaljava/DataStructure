@@ -11,7 +11,7 @@ public class LargestSumContiguousSubarray {
         int maxSum = Integer.MIN_VALUE;
         int currSum = 0;
         for (int i = 0; i < arr.length; i++) {
-            currSum = currSum + arr[i];
+            currSum += arr[i];
             if (currSum > maxSum) {
                 maxSum = currSum;
             }

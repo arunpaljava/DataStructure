@@ -1,4 +1,5 @@
 package Array;
+
 public class FindElementInSortedRoatedArray {
 
     public static void main(String s[]) {
@@ -8,24 +9,24 @@ public class FindElementInSortedRoatedArray {
         System.out.println("Index of " + k + " is " + elementIndex);
     }
 
-    private static int bSearch(int[] array, int k) {
+    private static int bSearch(int[] arr, int k) {
         int low = 0;
-        int high = array.length - 1;
+        int high = arr.length - 1;
         while (low <= high) {
             int mid = (low + high) / 2;
-            if (array[mid] == k) {
+            if (arr[mid] == k) {
                 return mid;
             }
-            if (array[low] < array[mid]) {
+            if (arr[low] < arr[mid]) {
                 //left part should be sorted
-                if (k >= array[low] && k < array[mid]) {
+                if (k >= arr[low] && k < arr[mid]) {
                     high = mid - 1;
                 } else {
                     low = mid + 1;
                 }
             } else {
                 //Right part should be sorted
-                if (k > array[mid] && k <= array[high]) {
+                if (k > arr[mid] && k <= arr[high]) {
                     low = mid + 1;
                 } else {
                     high = mid - 1;

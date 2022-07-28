@@ -42,6 +42,7 @@ public class BinaryTreeBoundaryTraversalOfBinaryTree {
             System.out.print(node.data + " ");
         } // do nothing if it is a leaf node, this way we avoid // duplicates in output
     }
+
     private void printBoundaryLeft(Node node) {
         if (node == null)
             return;
@@ -70,6 +71,7 @@ public class BinaryTreeBoundaryTraversalOfBinaryTree {
         Node left;
         Node right;
         int data;
+
         Node(int data) {
             this.data = data;
             left = right = null;

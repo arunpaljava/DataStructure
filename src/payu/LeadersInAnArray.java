@@ -1,6 +1,7 @@
 package payu;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class LeadersInAnArray {
@@ -12,7 +13,16 @@ public class LeadersInAnArray {
 
     private static List<Integer> getLeadersInAnArray(int[] arr, int n) {
         ArrayList<Integer> list = new ArrayList<>();
-        int i = 0, j = 1;
+        int leaders = 0;
+        for(int i=n-1;i>=0;i--){
+            if(arr[i]>leaders){
+                leaders=arr[i];
+                list.add(leaders);
+            }
+        }
+        Collections.reverse(list);
+        return list;
+        /*int i = 0, j = 1;
         while (i < n) {
             if (i == n - 1) {
                 list.add(arr[i]);
@@ -27,7 +37,7 @@ public class LeadersInAnArray {
                 i = j;
                 j++;
             }
-        }
-        return list;
+        }*/
+        /*return list;*/
     }
 }

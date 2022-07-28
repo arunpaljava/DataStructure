@@ -16,18 +16,15 @@ public class MaxSubarraySum {
 
         for (int i = 0; i < arr.length; i++) {
             // Your code here
-            currentSum = currentSum + arr[i];
+            currentSum += arr[i];
             if (currentSum > sum) {
                 sum = currentSum;
-            } else if (currentSum < 0) {
+            }
+            if (currentSum < 0) {
                 currentSum = 0;
             }
         }
-        if (sum < 0) {
-            return -1;
-        }
         return sum;
-
 
     }
 }

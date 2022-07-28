@@ -3,6 +3,7 @@ package calsoftinc;
 public class FindMaximumProductOfSubArray {
 
     public static void main(String args[]) {
+
         int arr[] = {0, 6, -3, -10, 0, 2};
         int max = maxSubarrayProduct(arr);
         System.out.println(max);

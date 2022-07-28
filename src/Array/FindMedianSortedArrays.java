@@ -2,8 +2,8 @@ package Array;
 
 public class FindMedianSortedArrays {
     public static void main(String s[]) {
-        int[] nums1 = new int[]{1, 2, 4, 6, 7, 8};
-        int[] nums2 = new int[]{3, 5, 9, 10};
+        int[] nums1 = new int[] {1, 2, 4, 6, 7, 8};
+        int[] nums2 = new int[] {3, 5, 9, 10};
         System.out.println(findMedianSortedArrays(nums1, nums2));
 
     }
@@ -26,7 +26,7 @@ public class FindMedianSortedArrays {
             }
         }
         int n = mergeArray.length;
-        if (n % 2 == 0) {//if length is even like 1,2,3,4 then median is (2+3)/2;
+        if (n % 2 == 0) {//if length is even like {1,2,3,4} then median is (2+3)/2;
             int mid = n / 2;
             int num1 = mergeArray[mid - 1];
             int num2 = mergeArray[mid];

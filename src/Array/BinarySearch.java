@@ -3,16 +3,16 @@ package Array;
 public class BinarySearch {
 
     public static void main(String arg[]) {
-        int n = 5;
         int arr[] = new int[]{1, 2, 3, 4, 5};
-        int k =5;
-        System.out.println(binarysearch(arr, n, k));
+        int k = 5;
+        System.out.println(binarysearch(arr, k));
     }
 
-    static int binarysearch(int arr[], int n, int k) {
+    static int binarysearch(int arr[], int k) {
         // code here
         int i = 0;
-        while (i <= n && i<arr.length) {
+        int n = arr.length;
+        while (i <= n && i < arr.length) {
             int mid = (i + n) / 2;
             if (arr[mid] == k) {
                 return mid;
